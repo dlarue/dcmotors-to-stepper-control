@@ -9,17 +9,13 @@
 // PID library
 #include <PID_v1.h>
 
-// AFMotor library
-//DJl #include <AFMotor.h>
+// L298N library
 // For two motors instance at once
 #include <L298NX2.h>
 
 // Quadrature Encoder Library
 #include "Encoder.h"
 
-// Create the motor driver instances
-//DJL AF_DCMotor motorX(1, MOTOR12_8KHZ);
-//DJL AF_DCMotor motorY(2, MOTOR12_8KHZ);
 // Pin definition
 const unsigned int EN_A = 3;
 const unsigned int IN1_A = 6;
@@ -29,6 +25,7 @@ const unsigned int IN1_B = 8;
 const unsigned int IN2_B = 7;
 const unsigned int EN_B = 9;
 
+// Create the motor driver instance
 // With Enable pin to control speed
 //                     motor A            motor B
 //              |------------------||------------------|
@@ -240,22 +237,22 @@ void doPID()
   myPID_Y.Compute();
   if (abs(ERROR_X) < DEADBW_X) // If the motor X is in position within the deadband width (acceptable error)
     {
-      //DJL motorX.setSpeed(0); // Turn off the X motor
+      // Turn off the X motor
       motors.setSpeedA(0);
     }
   else
     {
-      //DJL motorX.setSpeed(abs(int(OUTPUT_X)));  // X Motor is regulated by PID controller ouput
+      // X Motor is regulated by PID controller ouput
       motors.setSpeedA(abs(int(OUTPUT_X)));
     }
   if (abs(ERROR_Y) < DEADBW_Y) // If the motor Y is in position within the deadband width (acceptable error)
     {
-      //DJL motorY.setSpeed(0); // Turn off the Y motor
+      // Turn off the Y motor
       motors.setSpeedB(0);
     }
   else
     {  
-      //DJL motorY.setSpeed(abs(int(OUTPUT_Y)));  // Y Motor is regulated by PID controller ouput
+      // Y Motor is regulated by PID controller ouput
       motors.setSpeedB(abs(int(OUTPUT_Y)));
     }
   int directionX;
@@ -263,28 +260,22 @@ void doPID()
   
   if(OUTPUT_X > 0)
     {
-      //DJL directionX = FORWARD;
       directionX = L298N::FORWARD;
     }
   if(OUTPUT_X < 0)
     {
-      //DJL directionX = BACKWARD;
       directionX = L298N::BACKWARD;
     }
     
   if(OUTPUT_Y > 0)
     {
-      //DJL directionY = FORWARD;
       directionY = L298N::FORWARD;
     }
   if(OUTPUT_Y < 0)
     {
-      //DJL directionY = BACKWARD;
       directionY = L298N::BACKWARD;
     }
   
-  //DJL motorX.run(directionX);
-  //DJL motorY.run(directionY);
   motors.runA(directionX);
   motors.runB(directionY);
 }
