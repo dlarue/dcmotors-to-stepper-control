@@ -14,6 +14,9 @@ The firmware runs on an Arduino Mega 2560 as it uses 4 interrupts to handle step
 The motors are driven by a L298N H-bridge contolling each channels via "ENA,IN1,IN2,IN3,IN4,ENB" inputs(outputs on the Arduino).
 Motor encoder outputs are also connected directly to the Arduino Mega.
 
+Installation:
+clone this repository to your computer. Extract the utility.rar contents into your local repository preserving the directory structure. In your Arduino IDE library add the L298N library by Andrea Lombardo( https://github.com/AndreaLombardo/L298N ). Compile and upload.
+
 Arduino Pin	->	signal name
 
 3		->	L298N-ENA
