@@ -27,9 +27,9 @@ Arduino Pin	->	signal name
 
 6		->	L298N-IN1
 
-7		->	L298N-IN3
+7		->	L298N-IN4
 
-8		->	L298N-IN4
+8		->	L298N-IN3
 
 9		->	L298N-ENB
 
