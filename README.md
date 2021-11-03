@@ -7,7 +7,9 @@ Combined with a GRBL based Arduino, a 3 axis CNC plotter/painter can be built fr
 
 Inspired by this DIY wall painting bot with the hopes of having far more resolution capabilities and instead of using custom software for the workflow
 be able to use commonly used CNC CAM software for GCode generation. 
+https://niklasroy.com/graffomat/
 
+Forked from this project in hopes it'll help other scale to bigger motors and higher accuracy:
 https://www.instructables.com/3-AXIS-CNC-PLOTTER-FROM-DC-MOTORS-AND-OPTICAL-ENCO/
 
 The firmware runs on an Arduino Mega 2560 as it uses 4 interrupts to handle step/direction input and encoder inputs.
