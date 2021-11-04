@@ -15,19 +15,32 @@ The motors are driven by a L298N H-bridge contolling each channels via "ENA,IN1,
 Motor encoder outputs are also connected directly to the Arduino Mega.
 
 Arduino Pin	->	signal name
+
 3		->	L298N-ENA
+
 4		->	L298N-ENB
+
 5		->	L298N-IN2
+
 6		->	L298N-IN1
+
 7		->	L298N-IN3
+
 8		->	L298N-IN4
+
 18		<-	MotorX-Encoder-chanA	(interrupt)
+
 19		<-	MotorX-Step		(interrupt)
+
 20		<-	MotorY-Encoder-chanA	(interrupt)
+
 21		<-	MotorY-Step		(interrupt)
 22		<-	MotorX-Encoder-chanB
+
 23		<-	MotorX-Direction
+
 24		<-	MotorY-Encoder-chanB
+
 25		<-	MotorY-Direction
 
 
