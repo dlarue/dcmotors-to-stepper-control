@@ -23,12 +23,12 @@ const unsigned int IN2_A = 5;
 //
 const unsigned int IN1_B = 8;
 const unsigned int IN2_B = 7;
-const unsigned int EN_B = 9;
+const unsigned int EN_B = 4;
 
 // Create the motor driver instance
 // With Enable pin to control speed
 //                     motor A            motor B
-//              |------------------||------------------|
+//            |------------------||------------------|
 L298NX2 motors(EN_A, IN1_A, IN2_A, EN_B, IN1_B, IN2_B);
 
 // Set up pins for the quadrature encoders - Arduino MEGA2560 has 6 interrupt pins.
