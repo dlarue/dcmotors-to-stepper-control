@@ -37,6 +37,7 @@ Arduino Pin	->	signal name
 20		<-	MotorY-Encoder-chanA	(interrupt)
 
 21		<-	MotorY-Step		(interrupt)
+
 22		<-	MotorX-Encoder-chanB
 
 23		<-	MotorX-Direction
