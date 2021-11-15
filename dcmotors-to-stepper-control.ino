@@ -48,11 +48,12 @@ L298NX2 motors(EN_A, IN1_A, IN2_A, EN_B, IN1_B, IN2_B);
 #define DEBUG_Y             0
 
 // For calculating the actual movements
-#define STEPSPERMM_X      24.5    // STEP/mm is used in the GRBL for DC motor X axis.
 #define DEADBW_X          2.5 //4.5     // Deadband width = 4.5 --> Acceptable error for positioning in mm: 0.18mm.
-
-#define STEPSPERMM_Y      24.5 //192.0   // STEP/mm is used in the GRBL for DC motor Y axis.
 #define DEADBW_Y          2.5 //4.5 //19.2    // Deadband width = 19.2 --> Acceptable error for positioning in mm: 0.1mm.
+
+// for reference and only used in DEBUG output, Steps/mm must be set in GRBL config $100,$101
+#define STEPSPERMM_X      24.5    // STEP/mm is used in the GRBL for DC motor X axis.
+#define STEPSPERMM_Y      24.5 //192.0   // STEP/mm is used in the GRBL for DC motor Y axis.
 
 
 // Set up Input
@@ -255,8 +256,8 @@ void doPID()
       // Y Motor is regulated by PID controller ouput
       motors.setSpeedB(abs(int(OUTPUT_Y)));
     }
-  int directionX;
-  int directionY;
+  L298N::Direction directionX;
+  L298N::Direction directionY;
   
   if(OUTPUT_X > 0)
     {
