@@ -1,5 +1,6 @@
 # dcmotors-to-stepper-control
 This Arduino program is refered from: https://github.com/tuenhidiy/CNC-PLOTTER-FROM-DC-MOTORS-AND-OPTICAL-ENCODERS
+Requires the L298N library by Andrea Lombardo found in the Arduino IDE Library Manager
 
 It is used to control 2 DC motors having 2 optical encoders with step / direction signals typically found as stepper driver inputs on CNC machines.
 In this project, DC motors can be simulated as same as stepper motors and we can control them via GRBL firmware for CNC application.
