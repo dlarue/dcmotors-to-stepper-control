@@ -6,6 +6,8 @@ It is used to control 2 DC motors having 2 optical encoders with step / directio
 In this project, DC motors can be simulated as same as stepper motors and we can control them via GRBL firmware for CNC application.
 Combined with a GRBL based Arduino, a 3 axis CNC plotter/painter can be built from 2 DC motors w/encoders and a servo to operate as the Z axis.
 
+![Fritzing diagram](https://github.com/dlarue/dcmotors-to-stepper-control/blob/master/dcMotor2StepperControl-Sketch%202_bb.png)
+
 Inspired by this DIY wall painting bot with the hopes of having far more resolution capabilities and instead of using custom software for the workflow
 be able to use commonly used CNC CAM software for GCode generation. 
 https://niklasroy.com/graffomat/
